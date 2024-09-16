@@ -1,15 +1,19 @@
-<?php $description = get_sub_field('description');
-      $image = get_sub_field('image');
-      $logoImage = get_sub_field('logo_image');
-      $logo = get_sub_field('logo');
-?>
+<?php $title = get_sub_field('title'); ?>
+<?php $text = get_sub_field('text'); ?>
+<?php $description = get_sub_field('description'); ?>
+<?php $button = get_sub_field('button'); ?>
+<?php $buttonLink = get_sub_field('button_link'); ?>
+<?php $image = get_sub_field('image'); ?>
 
 <div class="hero">
-    <div class="hero__description">
-         <img src="<?php echo($logo["sizes"]["onqor-large"]) ?>" />
-         <p><?php echo($description) ?></p>
-    </div>
-    <div style='background-image: url("<?php echo($image["sizes"]["onqor-large"]) ?>")' class="hero__photo">
-         <img src="<?php echo($logoImage["sizes"]["onqor-logo"]) ?>" />
+    <div class="hero__wrapper">
+        <div class="hero__wrapper__text">
+            <h1><?php echo $title ?></h1>
+            <p><?php echo $text ?></p>
+            <div class="button-container">
+                <a href="<?php echo $buttonLink['url'] ?>"><?php echo $button ?></a>
+            </div>
+        </div>
+        <div style="background-image: url(<?php echo $image['url'] ?>)" class="hero__image"></div>
     </div>
 </div>

@@ -6,46 +6,30 @@ if( have_rows('flexible_content') ):
 
         if( get_row_layout() == 'hero' ): ?>
             <?php include 'blocks/hero.php'; ?>
-        <?php endif; 
-        
-        if( get_row_layout() == 'gallery' ): ?>
-            <?php include 'blocks/gallery.php'; ?>
-        <?php endif; 
-       
-        if( get_row_layout() == 'photo_section' ): ?>
-            <?php include 'blocks/photo_section.php'; ?>
+        <?php endif;
+ 
+        if( get_row_layout() == 'words_slider' ): ?>
+            <?php include 'blocks/word-slider.php'; ?>
         <?php endif;
 
-        if( get_row_layout() == 'paragraph_area' ): ?>
-            <?php include 'blocks/paragraph_area.php'; ?>
-        <?php endif;
-
-        if( get_row_layout() == 'two_columns' ): ?>
-            <?php include 'blocks/two_columns.php'; ?>
-        <?php endif;
-
-        if( get_row_layout() == 'photo_title' ): ?>
-            <?php include 'blocks/photo_title.php'; ?>
-        <?php endif;
-
-        if( get_row_layout() == 'admission' ): ?>
-            <?php include 'blocks/admission.php'; ?>
+        if( get_row_layout() == 'projects' ): ?>
+            <?php include 'blocks/projects.php'; ?>
         <?php endif;
 
         if( get_row_layout() == 'services' ): ?>
             <?php include 'blocks/services.php'; ?>
         <?php endif;
 
-        if( get_row_layout() == 'form_admission' ): ?>
-            <?php include 'blocks/form_admission.php'; ?>
+        if( get_row_layout() == 'work_with' ): ?>
+            <?php include 'blocks/work-with.php'; ?>
         <?php endif;
 
-        if( get_row_layout() == 'photo_form' ): ?>
-            <?php include 'blocks/photo_form.php'; ?>
+        if( get_row_layout() == 'niches' ): ?>
+            <?php include 'blocks/niches.php'; ?>
         <?php endif;
 
-        if( get_row_layout() == 'slider_link' ): ?>
-            <?php include 'blocks/slider_link.php'; ?>
+        if( get_row_layout() == 'about_me' ): ?>
+            <?php include 'blocks/about-me.php'; ?>
         <?php endif;
 
     endwhile;

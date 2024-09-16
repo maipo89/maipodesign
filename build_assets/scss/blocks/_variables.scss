@@ -1,56 +1,23 @@
 // Font Families //
 
-$alegreya: 'Alegreya', serif;
-$alegreyaSans: 'Alegreya Sans', serif;
-
-
-// Headings //
-
-$heading-family: $alegreya;
-$h1-size: 70px;
-$h2-size: 48px;
-$h3-size: 39px;
-$h4-size: 31px;
-$h5-size: 25px;
-
-$p-family: $alegreyaSans;
-$p-normal: 25px;
-$p-small: 20px;
-$p-smaller: 16px;
-$p-thin: 13px;
-$p-light: 16px;
-$p-light1: 13px;
-$p-light2: 10px;
-$p-light-weight: 300;
-$p-normal-weight: 400;
-$p-medium-weight: 500;
-
+$quicksand: 'Quicksand', sans-serif;
 
 // Colors Palette //
 
 //primary 
 
-$shadow: #87846A;
-$tan: #CDAC8E;
-$pale-silver: #A2A490;
-$quick-silver: #A9A398;
-$mustard-green: #686A27;
+$red: #88202d;
+$redAncora: #4a010a;
+$green: #d7dd63;
+$brown: #ca9b69;
+$light-gray: #d3d3d7;
+$gold: #eede90;
+$antique: #f9f7f2;
 $white: #FFFFFF;
 $gray: #8B8B8B;
-$black: #000000;
+
 
 //secondary
-
-$terracotta: #944323;
-$chilled-cucumber: #C8CCB2;
-$antique-white: #FFF9F1;
-$antique-white-opacity: #FFF9F1CF;
-$pale-pink: #F9E4CA;
-$light-gray: #C4C4C4;
-$beige: #D8D7F4;
-
-$corianderOpacity: #C9CEB1A3;
-$coriander: #C9CEB1;
 
 //mixins
 
@@ -81,3 +48,10 @@ $coriander: #C9CEB1;
     justify-content: flex-start;
     flex-direction: $direction;
 }
+
+// Breakpoints
+
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 450px;
+$smaller-screen: 320px;

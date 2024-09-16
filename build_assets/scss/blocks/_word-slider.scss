@@ -1,0 +1,62 @@
+.word-slider {
+    background-color: $redAncora;
+    width: 100%;
+    height: 220px;
+    position: relative;
+    @media (max-width: 768px) {
+        height: 150px;
+    }
+    &__container {
+        margin: -58px 0;
+        position: relative;
+        overflow: hidden;
+        cursor: default;
+        mix-blend-mode: screen;
+        top: -25px;
+        z-index: 20;
+        width: 100%;
+        pointer-events: none;
+
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity 2s;
+        }
+        .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+            opacity: 0
+        }
+
+        .boxes {
+            display: flex;
+            position: relative;
+            text-align: center;
+            white-space: nowrap;
+
+            .box {
+                position: relative;
+                flex: 0 0 33%;
+                padding: 58px 40px;
+
+                @media (max-width: 768px) {
+                    padding: 58px 10px;
+                }
+
+                .text {
+                    position: relative;
+                    display: inline-block;
+                    z-index: 1;
+                    color: black;
+                    text-transform: uppercase;
+                    font-family: $quicksand;
+                    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+                    line-height: 100%;
+                    font-weight: 700;
+                    font-size: 150px !important;
+
+                    @media (max-width: 768px) {
+                        font-size: 84px !important;
+                    }
+                }
+            }
+        }
+
+    }
+}

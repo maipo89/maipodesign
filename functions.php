@@ -133,14 +133,69 @@ function theme_styles()
 
 
 }
+
+// Google Fonts
+
 add_action('wp_enqueue_scripts', 'theme_styles');
 
 function wpb_add_google_fonts() {
  
   wp_enqueue_style( 'wpb-google-fonts', "https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans:wght@300;400;500&display=swap");
+  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet');
   wp_enqueue_style( 'wpb-google-fonts', "https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 }
    
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+// Google Map
+
+function my_acf_init() {
+  acf_update_setting('google_api_key', 'AIzaSyDMqSLoDfBqzu0bVuT1USXebfMK83OX42M');
+}
+add_action('acf/init', 'my_acf_init');
+
+// Gsap
+
+function enqueue_gsap() {
+  // Enqueue GSAP core
+  wp_enqueue_script('gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js', array(), null, true);
+
+  // Enqueue ScrollTrigger plugin
+  wp_enqueue_script('gsap-scrolltrigger', 'https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/ScrollTrigger.min.js', array('gsap'), null, true);
+
+  // Enqueue MotionPathPlugin
+  wp_enqueue_script('gsap-motionpath', 'https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/MotionPathPlugin.min.js', array('gsap'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_gsap');
+
+// Menu
+
+function wpb_custom_new_menu() {
+  register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+
+if( function_exists('acf_add_options_page') ) {
+    
+  acf_add_options_page();
+  
+}
+
+// Slick
+
+function enqueue_slick_scripts() {
+  wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+  wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_slick_scripts');
+
+
+// Svg permissions
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

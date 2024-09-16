@@ -1,125 +1,74 @@
 @import 'blocks/_variables.scss';
 @import 'slick.scss';
-@import 'select.scss';
-@import 'blocks/_footer.scss';
-@import 'blocks/_hero.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet');
+@import 'custom-dropdown.scss';
 @import 'blocks/_header.scss';
-@import 'blocks/_paragraph-area.scss';
-@import 'blocks/_two-columns.scss';
-@import 'blocks/_photo-section.scss';
-@import 'blocks/_photo-title.scss';
-@import 'blocks/_admission.scss';
+@import 'blocks/_hero.scss';
+@import 'blocks/_projects.scss';
+@import 'blocks/_word-slider.scss';
 @import 'blocks/_services.scss';
-@import 'blocks/_form-admission.scss';
-@import 'blocks/_photo-form.scss';
-@import 'blocks/_slider-link.scss';
+@import 'blocks/_footer.scss';
+@import 'blocks/_work-with.scss';
+@import 'blocks/_niches.scss';
+@import 'blocks/_about-me.scss';
 
 body {
     background-color: white;
 }
 
-h2 {
-    font-family: $alegreya;
-    font-size: $h2-size;
-    color: $shadow;
-}
-
-h3 {
-    font-family: $alegreya;
-    font-size: $h3-size;
-    color: $shadow;
-}
-
-h4 {
-    font-family: $alegreya;
-    font-size: $h4-size;
-    color: $shadow;
-}
-
-h5 {
-    font-family: $alegreya;
-    font-size: $h5-size;
-    color: $shadow;
-}
-
-p {
-    font-family: $alegreyaSans;
-    font-size: $p-normal;
-    color: $gray;
-    line-height: 31px;
-}
-
-.button {
-    padding: 7.5px 50px;
-    border: 2px solid $corianderOpacity;
-    font-family: $alegreyaSans;
-    font-size: $p-small;
-    background-color: white;
-    color: $mustard-green;
-    margin-top: 20px;
-
-    &:hover {
-        background-color: $coriander;
-        border: 2px solid $coriander;
-        color: $white;
-    }
-
-    &:active {
-        background-color: $corianderOpacity;
-        border: 2px solid $corianderOpacity;
-        color: $white;
-    }
-
-    &:focus {
-        outline: 0;
-        border: 2px solid $corianderOpacity;
-    }
-}
-
-input {
-    border: 2px solid $corianderOpacity;
-    padding: 12.5px 0 12.5px 8px;
-    width: 100%;
-    font-size: $p-small;
-    font-family: $alegreyaSans;
-    height: 55px;
-    color: $mustard-green;
-    font-size: $p-small;
-
-    &::placeholder {
-        color: $mustard-green;
-        font-size: $p-small;
-    }
-
-    &:focus {
-        border: solid 2px $coriander;
-        outline: solid 2px transparent;
-
-        &::placeholder {
-            color: transparent;
+.sections {
+    transition: right 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    position: relative;
+    right: 0;
+    &.open {
+        right: 40%;
+        @media (max-width: 800px) {
+            right: 50%;
+        }
+        @media (max-width: 600px) {
+            right: 70%;
         }
     }
 }
 
-textarea {
-    border: 2px solid $corianderOpacity;
-    padding: 12.5px 0 0 8px;
-    width: 100%;
-    font-size: $p-small;
-    font-family: $alegreyaSans;
-    resize: none;
+// Slick 
 
-    &::placeholder {
-        color: $mustard-green;
-        font-size: $p-small;
+.slick-dots {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    height: 17px;
+    justify-content: center;
+    position: relative;
+
+    li {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $red;
+        margin-right: 8px;
+        cursor: pointer;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        button {
+            display: none !important;
+        }
+
+        &:hover {
+            outline: 2px solid $redAncora;
+            background-color: white;
+        }
     }
 
-    &:focus {
-        border: 2px solid $coriander;
-        outline: solid 2px transparent;
+    li.slick-active {
+        background-color: $redAncora;
 
-        &::placeholder {
-            color: transparent;
+        &:hover {
+            outline: none;
         }
     }
 }
+

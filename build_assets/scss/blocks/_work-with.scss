@@ -1,0 +1,156 @@
+.work-with {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: fit-content;
+    background-color: $redAncora;
+    overflow: hidden;
+    &__wrapper {
+        padding: 0 40px 0 40px;
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        h2 {
+            color: white;
+            font-size: 50px;
+            font-family: $quicksand;
+            margin-bottom: 100px;
+            background-color: $redAncora;
+            width: fit-content;
+            position: relative;
+            @media (max-width: 450px) {
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 150px;
+            }
+            @media (max-width: 375px) {
+                font-size: 34px;
+            }
+        }
+    }
+    &__clients {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        @media (max-width: 1070px) {
+            flex-direction: column;
+        }
+    }
+    &__client {
+        width: 40%;
+        height: fit-content;
+        background-color: $red;
+        border: 2px solid $red;
+        border-radius: 40px;
+        padding: 30px;
+        position: relative;
+        .number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: $green;
+            text-align: center;
+            margin: 0;
+            @media (max-width: 450px) {
+                font-size: 2.2rem;
+            }
+        }
+        h3 {
+            color: white;
+            font-size: 3.1rem;
+            font-family: $quicksand;
+            text-align: center;
+            margin-bottom: 40px;
+            @media (max-width: 450px) {
+                font-size: 2.2rem;
+            }
+        }
+        p {
+            color: white;
+            font-family: $quicksand;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            text-align: center;
+            @media (max-width: 450px) {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 1070px) {
+            &:first-of-type {
+                width: 50%;
+                margin-left: 200px;
+                margin-bottom: 80px;
+            }
+            &:last-of-type {
+                width: 50%;
+                margin-right: 200px;
+            }
+        }
+        @media (max-width: 768px) {
+            &:first-of-type {
+                width: 70%;
+                margin-left: 100px;
+                margin-bottom: 80px;
+            }
+            &:last-of-type {
+                width: 70%;
+                margin-right: 100px;
+            }
+        }
+        @media (max-width: 450px) {
+            &:first-of-type {
+                width: 100%;
+                margin-bottom: 100px;
+                margin-left: 0;
+            }
+            &:last-of-type {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+    #work-with-svg {
+        position: absolute;
+        width: 893px;
+        left: 15%;
+        top: 60px;
+        overflow: visible;
+        @media (max-width: 1265px) {
+            top: 100px;
+            left: 8%;
+        }
+        @media (max-width: 1070px) {
+            display: none;
+        }
+    }
+    #work-with-svg-mobile {
+        display: none;
+        @media (max-width: 1070px) {
+            display: block;
+            position: absolute;
+            width: 800px;
+            top: 100px;
+            overflow: visible;
+        }
+        @media (max-width: 450px) {
+            top: -30px;
+        }
+    }
+    #path-work-with {
+        display: none;
+        @media (max-width: 1070px) {
+            display: block;
+            position: absolute;
+            width: 450px;
+            left: 122px;
+            top: 130px;
+        }
+        @media (max-width: 850px) {
+            left: 85px;
+        }
+        @media (max-width: 450px) {
+            left: -30px;
+            width: 326px;
+            top: 115px;
+        }
+    }
+}
